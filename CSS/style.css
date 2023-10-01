@@ -26,9 +26,51 @@ nav{
 
 @media screen and (width < 1400px) {
     .Slider {
-        height: auto;
+        height: 85vh;
     }
 }
+
+@media screen and (width < 901px){
+    #carouselExampleCaptions {
+        display: none;
+    }
+}
+
+#carouselExampleCaptions_mobile {
+    height: 85vh;
+}
+
+.mobile_img {
+    height: 85vh;
+}
+
+@media screen and (width > 400px){
+    #carouselExampleCaptions_mobile {
+        display: none;
+    }
+}
+
+#carouselExampleCaptions_square {
+    height: auto;
+}
+
+.square_img {
+    height: auto;
+}
+
+@media screen and (width < 400px) {
+    #carouselExampleCaptions_square {
+        display: none;
+    }
+}
+
+@media screen and (width > 900px) {
+    #carouselExampleCaptions_square {
+        display: none;
+    }
+}
+
+
 
 .Content_block {
     width: 100vw;
