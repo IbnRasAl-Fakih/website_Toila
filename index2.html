@@ -43,7 +43,7 @@
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Аккаунт</a>
 							<ul class="dropdown-menu dropdown-menu-sm" >
 								<li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_login" href="page.html">Войти</a></li>
-								<li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_register" href="page.html">Регистрация</a></li>
+								<li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_register" href="page.html" onclick="createUser()">Регистрация</a></li>
 							</ul>
 						</div>
 					</div>
@@ -81,24 +81,25 @@
 				</div>
 				<div class="modal-body text-dark">
 					<p class="mb-3">Имя</p>
-					<input class="mb-4 form-control rounded w-50" type="text" required>
+					<input class="mb-4 form-control rounded w-50" type="text" required id="regName">
 					<p class="mb-3">Фамилия</p>
-					<input class="mb-4 form-control rounded w-50" type="text" required>
+					<input class="mb-4 form-control rounded w-50" type="text" required id="regSurname">
 					<p class="mb-3">Номер телефона</p>
-					<input class="mb-4 form-control rounded w-50" type="tel" required>
+					<input class="mb-4 form-control rounded w-50" type="tel" required id="regPhone">
 					<p class="mb-3">Пароль</p>
-					<input type="password" class="form-control rounded w-50 mb-4" required>
+					<input type="password" class="form-control rounded w-50 mb-4" required id="regPassword">
 					<p class="mb-3">Повторите пароль</p>
-					<input type="password" class="form-control rounded w-50" required>
+					<input type="password" class="form-control rounded w-50" required id="regPassword2">
+					<span id="error"></span>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="text-light bg-danger rounded-3" data-bs-dismiss="modal">Зарегистрироваться</button>
+					<button type="submit" class="text-light bg-danger rounded-3" id="signup">Зарегистрироваться</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
-   <main class="pb-5">
+<main class="pb-5">
 	<div class="photo-block position-relative d-flex justify-content-center">
 		<img class="black_image" src="images/1920x1080-px-chair-HDR-indoors-Philadelphia-restaurant-table-1216625 1.png"  alt="...">
 		<div class="position-absolute top-50 text-center slova">
@@ -119,14 +120,18 @@
 				<div class="p-3">
 					<div class="box-cont">
 						<div class="card">
-							<img src="images/res1.jpg" class="card-img-top" alt="...">
+							<img src="images/gulvar_pic8.jpeg" class="card-img-top" alt="...">
 						  
 							<div class="card-body">
-							  <h5 class="card-title">Заголовок карточки</h5>
-							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+								<h5 class="card-title">GULVAR Banquet Hall</h5>
+								<div class="card_text_block">
+									<p class="card-text">В нашем банкетном зале, расположенный вдоль красивого парка в центре города, вы можете провести свадьбы, отметить юбилеи, дни рождения, также провести у нас банкеты, корпоративы, семинары, разного формата тренинги, конференции и многое другое.</p>
+								</div>
+								<div class="card_button mt-3">
+								  <a href="/restaurants/restaurant_1.html" class="btn btn-primary mx-auto">Узнать больше</a>
+								</div>
 							</div>
-						  </div>
+						</div>
 					</div>
 				</div>
 			  </div>
@@ -139,7 +144,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -154,7 +161,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -169,7 +178,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -184,7 +195,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -199,7 +212,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -214,7 +229,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -229,7 +246,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -244,7 +263,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -259,7 +280,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -274,7 +297,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -289,7 +314,9 @@
 							<div class="card-body">
 							  <h5 class="card-title">Заголовок карточки</h5>
 							  <p class="card-text">Небольшой пример текста, основанного на названии карточки и составляющего основную часть содержимого карточки.</p>
-							  <a href="#" class="btn btn-primary">Иди куда-нибудь</a>
+							  <div class="card_button d-flex align-items-end">
+								<a href="#" class="btn btn-primary mx-auto">Иди куда-нибудь</a>
+							  </div>
 							</div>
 						  </div>
 					</div>
@@ -299,62 +326,57 @@
 		  </div>
 	</div>
 
-   </main>
+</main>
 
 
-   <div class="foot ffbe3f">
-	<div class="container">
-		<footer>
-			<div class="container">
-				<footer class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 py-5 border-top">
-				  <div class="col mb-3">
-					<a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-					  <a class="mx-0 fw-bold ffbe3f text-decoration-none logo" href="#">
-						<img src="images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text mx-0">Toila
-					</a>	
-					</a>
-				  </div>
-			  
-				  
-			  
-				  <div class="col mb-3 ffbe3f">
-					<h5>Навигация</h5>
-					<ul class="nav flex-column">
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Главная</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Рестораны</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Тамады</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Меню</a></li>
-					</ul>
-				  </div>
-			  
-				  <div class="col mb-3">
-					<h5>Связаться с нами</h5>
-					<ul class="nav flex-column">
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Адрес &nbsp;&nbsp;&nbsp;Мәңгілік Ел, С1</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Телефон &nbsp;&nbsp;&nbsp;+77777777777</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Email &nbsp;&nbsp;&nbsp;toila@gmail.com</a></li>
-					</ul>
-				  </div>
-			  
-				  <div class="col mb-3">
-					<h5>Техподдержка</h5>
-					<ul class="nav flex-column">
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771604578</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77756953427</a></li>
-					  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771474935</a></li>
-					</ul>
-				  </div>
-				</footer>
-			  </div>
+	<div class="container w-100  border-top">
+		<footer class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 py-5">
+			<div class="col mb-3">
+				<a class="fw-bold logo fs-4" href="index.html">
+					<img src="images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text">Toila</a>
+			</div>
+			
+			<div class="col mb-3 ffbe3f">
+				<h5>Навигация</h5>
+				<ul class="nav flex-column">
+				<li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-light">Главная</a></li>
+				<li class="nav-item mb-2"><a href="index2.html" class="nav-link p-0 text-light">Рестораны</a></li>
+				<li class="nav-item mb-2"><a href="index3.html" class="nav-link p-0 text-light">Тамады</a></li>
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Меню</a></li>
+				</ul>
+			</div>
+		
+			<div class="col mb-3">
+				<h5>Связаться с нами</h5>
+				<ul class="nav flex-column">
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Адрес &nbsp;&nbsp;&nbsp;Мәңгілік Ел, С1</a></li>
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Телефон &nbsp;&nbsp;&nbsp;+77777777777</a></li>
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Email &nbsp;&nbsp;&nbsp;toila@gmail.com</a></li>
+				<li>
+					<div class="">
+						<a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl text-light me-4"></i></a>
+						<a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fa-brands fa-instagram fa-xl text-light me-4"></i></a>
+						<a href="https://twitter.com/?lang=ru" target="_blank"><i class="fa-brands fa-x-twitter fa-xl text-light me-4"></i></a>
+						<a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok fa-xl text-light me-4"></i></a>
+					</div>
+				</li>
+				</ul>
+			</div>
+		
+			<div class="col mb-3">
+				<h5>Техподдержка</h5>
+				<ul class="nav flex-column">
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771604578</a></li>
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77756953427</a></li>
+				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771474935</a></li>
+				</ul>
+			</div>
 		</footer>
-	  </div>
-   </div>
+	</div>
 
 
 
-
-   
-
+	<script src="https://kit.fontawesome.com/a41b8ba207.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

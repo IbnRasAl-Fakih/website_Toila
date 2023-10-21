@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basket</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="icon" href="images/logo-removebg-preview.png">
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="col-md-12 sticky-top w-100">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand mx-0 fw-bold logo" href="index.html">
+                    <img src="images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text mx-0">Toila</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-0">
+                        <li class="nav-item mx-3 ">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active text-white"  href="index2.html">Рестораны</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-white" href="index3.html">Тамады</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-white" href="#">Меню</a>
+                        </li> 
+                    </ul>
+        
+                    <div class="">
+                        <div class="dropdown ffbe3f">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Аккаунт</a>
+                            <ul class="dropdown-menu dropdown-menu-sm" >
+                                <li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_login" href="page.html">Войти</a></li>
+                                <li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_register" href="page.html">Регистрация</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </nav>
+   </header>
+
+    <div class="modal fade" id="staticBackdrop_login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title text-dark fs-bold" id="staticBackdropLabel">Войти</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p class="mb-3">Номер телефона</p>	
+                    <input class="mb-4 form-control rounded w-50" type="tel" required>
+                    <p class="mb-3">Пароль</p>
+                    <input type="password" class="form-control rounded w-50" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="text-light bg-danger rounded-3" data-bs-dismiss="modal">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop_register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel_register" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title text-dark fw-bold" id="staticBackdropLabel_register">Регистрация</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p class="mb-3">Имя</p>
+                    <input class="mb-4 form-control rounded w-50" type="text" required>
+                    <p class="mb-3">Фамилия</p>
+                    <input class="mb-4 form-control rounded w-50" type="text" required>
+                    <p class="mb-3">Номер телефона</p>
+                    <input class="mb-4 form-control rounded w-50" type="tel" required>
+                    <p class="mb-3">Пароль</p>
+                    <input type="password" class="form-control rounded w-50 mb-4" required>
+                    <p class="mb-3">Повторите пароль</p>
+                    <input type="password" class="form-control rounded w-50" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="text-light bg-danger rounded-3" data-bs-dismiss="modal">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="main_body">
+        <p id="res_title"></p>
+        <p id="res_city"></p>
+        <p id="res_number"></p>
+        <p id="res_price"></p>
+        <p id="res_date"></p>
+        <img src="#" alt="" id="res_img">
+    </main>
+
+
+
+
+
+
+    <div class="container w-100  border-top">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 py-5">
+          <div class="col mb-3">
+            <a class="fw-bold logo fs-4" href="index.html">
+                <img src="images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text">Toila</a>
+          </div>
+          
+          <div class="col mb-3 ffbe3f">
+            <h5>Навигация</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-light">Главная</a></li>
+              <li class="nav-item mb-2"><a href="index2.html" class="nav-link p-0 text-light">Рестораны</a></li>
+              <li class="nav-item mb-2"><a href="index3.html" class="nav-link p-0 text-light">Тамады</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Меню</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Связаться с нами</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Адрес &nbsp;&nbsp;&nbsp;Мәңгілік Ел, С1</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Телефон &nbsp;&nbsp;&nbsp;+77777777777</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Email &nbsp;&nbsp;&nbsp;toila@gmail.com</a></li>
+              <li>
+                <div class="">
+                    <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl text-light me-4"></i></a>
+                    <a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fa-brands fa-instagram fa-xl text-light me-4"></i></a>
+                    <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fa-brands fa-x-twitter fa-xl text-light me-4"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok fa-xl text-light me-4"></i></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Техподдержка</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771604578</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77756953427</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771474935</a></li>
+            </ul>
+          </div>
+        </footer>
+    </div>
+
+    
+
+    <script type="module" src="js/basket.js"></script>
+    <script src="https://kit.fontawesome.com/a41b8ba207.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant_1</title>
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="icon" href="/images/logo-removebg-preview.png">
+	<link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <header class="col-md-12 sticky-top w-100">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand mx-0 fw-bold logo" href="/index.html">
+                            <img src="/images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text mx-0">Toila</a>
+                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-0">
+                                <li class="nav-item mx-3 ">
+                                    <a class="nav-link active text-white" aria-current="page" href="/index.html">Главная</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link active text-white"  href="/index2.html">Рестораны</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-white" href="/index3.html">Тамады</a>
+                                </li>
+                                <li class="nav-item mx-3">
+                                    <a class="nav-link text-white" href="#">Меню</a>
+                                </li> 
+                            </ul>
+                
+                            <div class="">
+                                <div class="dropdown ffbe3f">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Аккаунт</a>
+                                    <ul class="dropdown-menu dropdown-menu-sm" >
+                                        <li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_login" href="page.html">Войти</a></li>
+                                        <li><a class="dropdown-item btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop_register" href="page.html">Регистрация</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </nav>
+           </header>
+        
+            <div class="modal fade" id="staticBackdrop_login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title text-dark fs-bold" id="staticBackdropLabel">Войти</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <p class="mb-3">Номер телефона</p>	
+                            <input class="mb-4 form-control rounded w-50" type="tel" required>
+                            <p class="mb-3">Пароль</p>
+                            <input type="password" class="form-control rounded w-50" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="text-light bg-danger rounded-3" data-bs-dismiss="modal">Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="modal fade" id="staticBackdrop_register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel_register" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title text-dark fw-bold" id="staticBackdropLabel_register">Регистрация</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            <p class="mb-3">Имя</p>
+                            <input class="mb-4 form-control rounded w-50" type="text" required>
+                            <p class="mb-3">Фамилия</p>
+                            <input class="mb-4 form-control rounded w-50" type="text" required>
+                            <p class="mb-3">Номер телефона</p>
+                            <input class="mb-4 form-control rounded w-50" type="tel" required>
+                            <p class="mb-3">Пароль</p>
+                            <input type="password" class="form-control rounded w-50 mb-4" required>
+                            <p class="mb-3">Повторите пароль</p>
+                            <input type="password" class="form-control rounded w-50" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="text-light bg-danger rounded-3" data-bs-dismiss="modal">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="child content left_part">
+
+                <h1 class="my-5 res_title mx-auto">GULVAR Banquet Hall</h1>
+
+                <div id="res_gallery" class="row d-flex">
+                    <div class="col-md-4 p-3">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic1.jpeg" alt="">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic2.jpeg" alt="">
+                        <img class="img-fluid" src="/images/gulvar_pic3.jpeg" alt="" id="res_img">
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic4.jpeg" alt="">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic5.jpeg" alt="">
+                        <img class="img-fluid" src="/images/gulvar_pic6.jpeg" alt="">
+                    </div>
+                    <div class="col-md-4 p-3">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic7.jpeg" alt="">
+                        <img class="img-fluid mb-4" src="/images/gulvar_pic8.jpeg" alt="">
+                        <img class="img-fluid" src="/images/gulvar_pic9.jpeg" alt="">
+                    </div>
+                </div>
+
+                <div class="content_nav d-flex justify-content-center my-5 border-top border-bottom py-3">
+                    <a href="#res_gallery">Галерея</a>
+                    <a href="#res_description">Описание</a>
+                    <a href="#res_address">Адрес</a>
+                    <a href="#res_contacts">Контакты</a>
+                </div>
+
+                <div id="res_description" class="p-5 text-light">
+                    <p>В нашем банкетном зале, расположенный вдоль красивого парка в центре города, вы можете провести свадьбы, отметить юбилеи, дни рождения, также провести у нас банкеты, корпоративы, семинары, разного формата тренинги, конференции и многое другое. <br> <br>
+                    Наш просторный, дворцовый, большой зал с летней площадкой и красивой зоной для бракосочетания внутри парка вмещает от 70-ти до 300 человек. Также здесь, в нашем уютном VIP-зале вы можете проводить небольшие мероприятия до 50-ти гостей. <br> <br>
+                    Вас и каждого Вашего гостя ожидает изысканная и авторская кухня , высококачественный сервис, великолепная акустика, красивые фонтаны внутри зала и по периметру в европейском стиле и утончённый аристократический интерьер. <br> <br>
+                    Безупречное обслуживание и особая торжественная атмосфера в «GULVAR Banquet Hall » приятно поразит ваших гостей и оставит неизгладимое впечатление! <br> <br>
+                    Доверьте проведение вашего мероприятия первоклассным персоналам банкетного зала “GULVAR”!</p>
+                </div>
+
+                <div id="res_address" class="">
+                    <p class="text-light ms-5">Адрес: улица Қазыбек Би 43</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.7162097477226!2d76.95017427585844!3d43.25736917794248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836f2cab20f533%3A0x5d2b3643c08d6d33!2sGULVAR%20Banquet%20Hall!5e0!3m2!1sru!2skz!4v1697050329082!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-fluid p-5 w-100 h-100 pt-2"></iframe>
+                </div>
+
+                <div id="res_contacts" class="mt-5 mx-auto text-light">
+                    <h5 class="mb-3">Контактные данные</h5>
+                    <p>+7 700 200 41 01</p>
+                    <p>Сайт: <a href="https://gulvar.kz/" target="_blank">https://gulvar.kz/</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/gulvar.kz/">gulvar.kz</a></p>
+                </div>
+
+                <div class="booking text-light mx-auto mb-3">
+                    <h1 class="my-5">GULVAR Banquet Hall</h1>
+                    <img src="/images/icons8-город-64.png" alt="city_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Город : <p class="d-inline-block ms-2">Алматы</p> </p>
+                    <img src="/images/icons8-человек-50.png" alt="person_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Количество мест : <p class="d-inline-block ms-2">300</p></p>
+                    <img src="/images/icons8-тенге-64.png" alt="tenge_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Средний счет : <p class="d-inline-block ms-2">15000</p> тг</p>
+    
+    
+                    <button class="mt-5 mb-3 res_button">Выбрать дату</button>
+                    <button class="res_button ms-3">Добавить в корзину &#8594; </button>
+                </div>
+            </div>
+
+
+            <div class="child right_part position-relative border-start">
+                <div id="rightPart" class="fixed_block p-4 text-light">
+                    <h1 class="my-5"><p id="res_title">GULVAR Banquet Hall</p></h1>
+                    <img src="/images/icons8-город-64.png" alt="city_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Город : <p id="res_city" class="d-inline-block ms-2">Алматы</p> </p>
+                    <img src="/images/icons8-человек-50.png" alt="person_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Количество мест : <p id="res_number" class="d-inline-block ms-2">300</p></p>
+                    <img src="/images/icons8-тенге-64.png" alt="tenge_image" width="30" height="30">
+                    <p class="d-inline-block ms-2">Средний счет : <p id="res_price" class="d-inline-block ms-2">15000</p> тг</p>
+
+
+
+                    <input type="date" id="davaToday" class="d-block mb-3 res_button">
+
+                    <button class="res_button" onclick="takeInfo()"><a href="/basket.html">Добавить в корзину &#8594;</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="child display-flex justify-content-center">
+            <div class="container w-100  border-top">
+                <footer class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 py-5">
+                  <div class="col mb-3">
+                    <a class="fw-bold logo fs-4" href="/index.html">
+                        <img src="/images/Remove-bg.ai_1695315521291.png" alt="Logo" width="70" height="70" class="d-inline-block align-text">Toila</a>
+                  </div>
+                  
+                  <div class="col mb-3 ffbe3f">
+                    <h5>Навигация</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="/index.html" class="nav-link p-0 text-light">Главная</a></li>
+                      <li class="nav-item mb-2"><a href="/index2.html" class="nav-link p-0 text-light">Рестораны</a></li>
+                      <li class="nav-item mb-2"><a href="/index3.html" class="nav-link p-0 text-light">Тамады</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Меню</a></li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Связаться с нами</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Адрес &nbsp;&nbsp;&nbsp;Мәңгілік Ел, С1</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Телефон &nbsp;&nbsp;&nbsp;+77777777777</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Email &nbsp;&nbsp;&nbsp;toila@gmail.com</a></li>
+                      <li>
+                        <div class="">
+                            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl text-light me-4"></i></a>
+                            <a href="https://www.instagram.com/?hl=ru" target="_blank"><i class="fa-brands fa-instagram fa-xl text-light me-4"></i></a>
+                            <a href="https://twitter.com/?lang=ru" target="_blank"><i class="fa-brands fa-x-twitter fa-xl text-light me-4"></i></a>
+                            <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok fa-xl text-light me-4"></i></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+              
+                  <div class="col mb-3">
+                    <h5>Техподдержка</h5>
+                    <ul class="nav flex-column">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771604578</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77756953427</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">+77771474935</a></li>
+                    </ul>
+                  </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="/js/restaurant.js"></script>
+    <script src="https://kit.fontawesome.com/a41b8ba207.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
